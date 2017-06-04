@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1028235354003",
+    "firebase_url": "https://mynavi-c016b.firebaseio.com",
+    "project_id": "mynavi-c016b",
+    "storage_bucket": "mynavi-c016b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028235354003:android:a65b75163de9d8e2",
+        "android_client_info": {
+          "package_name": "com.skrajput.mynavi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028235354003-9r93gs4meamqkhkfuutfht43dasclkd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skrajput.mynavi",
+            "certificate_hash": "61dec1e5ada5032dcdcd5c39acb68d2965edcf1f"
+          }
+        },
+        {
+          "client_id": "1028235354003-dpqj317bnhh5bmb94hl4a39c0kj8kfr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF8KuOCk8bwEWLpavng_ZjFDIc9J8WoU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028235354003-dpqj317bnhh5bmb94hl4a39c0kj8kfr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
