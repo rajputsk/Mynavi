@@ -52,7 +52,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
             finish();
 
             //and open profile activity
-            startActivity(new Intent(signup.this, MainActivity.class));
+            startActivity(new Intent(signup.this, login.class));
             Toast.makeText(this,"First LogOut",Toast.LENGTH_LONG).show();
 
         }
@@ -103,7 +103,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
                         //checking if success
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(signup.this, MainActivity.class));
+                            startActivity(new Intent(signup.this, login.class));
                         }else{
                             //display some message here
                             Toast.makeText(signup.this,"Registration Error",Toast.LENGTH_LONG).show();

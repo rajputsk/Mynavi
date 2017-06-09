@@ -1,7 +1,10 @@
 package com.skrajput.mynavi;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -19,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final int MY_REQUEST_CODE = 12;
     ImageView imageView;
 private FirebaseAuth firebaseAuth;
     @Override
@@ -84,6 +88,7 @@ private FirebaseAuth firebaseAuth;
         return super.onOptionsItemSelected(item);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -120,14 +125,5 @@ private FirebaseAuth firebaseAuth;
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void Logout(View v) {
-
-        firebaseAuth.signOut();
-        finish();
-        Intent i=new Intent(MainActivity.this,login.class);
-        startActivity(i);
-    }
-
 
 }

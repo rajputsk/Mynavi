@@ -45,7 +45,6 @@
             android:layout_margin="20dp"
             android:background="#f2d881"
             android:textSize="15pt"
-
             android:text="Signup" />
 
         <TextView

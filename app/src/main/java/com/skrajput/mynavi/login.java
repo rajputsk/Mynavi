@@ -46,7 +46,7 @@ if(firebaseAuth.getCurrentUser() != null){
 //close this activity
 finish();
 //opening profile activity
-startActivity(new Intent(getApplicationContext(),MainActivity.class));
+startActivity(new Intent(getApplicationContext(),aftersignup.class));
     Toast.makeText(this,"First LogOut",Toast.LENGTH_LONG).show();
 
 }
@@ -97,7 +97,7 @@ progressDialog.dismiss();
 if(task.isSuccessful()){
 //start the profile activity
 finish();
-Intent i=new Intent(getApplicationContext(), MainActivity.class);
+Intent i=new Intent(getApplicationContext(), aftersignup.class);
     i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 startActivity(i);
 }
