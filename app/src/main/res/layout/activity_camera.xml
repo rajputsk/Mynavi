@@ -6,23 +6,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.skrajput.mynavi.Camera"
-    android:weightSum="1">
+    >
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="fill_parent"
+        android:layout_height="550dp"
         app:srcCompat="@drawable/ic_menu_camera"
-        android:background="@color/colorBlack"/>
+        android:background="@color/colorBlack"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/button1" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:onClick="share"
         android:text="Share"
-        android:textColor="#efff0073"/>
+        android:textColor="#efff0073" />
 
 
 </LinearLayout>
