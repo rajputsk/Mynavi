@@ -9,8 +9,10 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.renderscript.Script;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -25,6 +27,8 @@ import android.Manifest;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import static java.lang.System.exit;
 
 public class Camera extends AppCompatActivity {
 
@@ -74,8 +78,8 @@ public class Camera extends AppCompatActivity {
 
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, PIC_CAPTURED);
-        // File photostorage = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        // photofile = new File(photostorage, (System.currentTimeMillis()) + ".jpg");
+         File photostorage = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+         photofile = new File(photostorage, (System.currentTimeMillis()) + ".jpg");
     }
 
 
@@ -125,6 +129,11 @@ public class Camera extends AppCompatActivity {
             } else {
 
                 Toast.makeText(this, "Oops,can't get the photo from your gallery", Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
+                //onBackPressed();
+                //exit(0);
             }
         }
 
@@ -158,10 +167,5 @@ public class Camera extends AppCompatActivity {
 
 }
 
-   
-    @Override
-    public void onBackPressed() {
-        moveTaskToBack(true);
-    }
 
 }
